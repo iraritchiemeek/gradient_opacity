@@ -9,6 +9,7 @@ $(function(){
 	for (var i = $(".rectangle").length - 1; i >= 0; i--) {
 		rectangle.scale($(".rectangle")[i])
 		rectangle.position($(".rectangle")[i])
+		rectangle.color($(".rectangle")[i])
 	};
 		// rectangle.fillGradient()
 })

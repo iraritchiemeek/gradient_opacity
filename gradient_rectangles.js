@@ -23,3 +23,13 @@ Rectangle.prototype.getRandPositionInRange = function() {
 	var max = 60
 	return Math.floor(Math.random() * (max-min + 1) + min)
 };
+
+Rectangle.prototype.getBaseColor = function() {
+	var rgb = [rgbValue(), rgbValue(), rgbValue()];
+    return "rgb(" + rgb.join(",") + ")";
+};
+
+Rectangle.prototype.color = function(rectangle) {
+	$(rectangle).css({"background":this.getBaseColor()})
+};
+
