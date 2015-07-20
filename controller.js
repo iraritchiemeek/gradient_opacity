@@ -4,8 +4,11 @@ $(function(){
 
 	for (var i = 0; i < 2; i++) {
 		rectangle.appendRectangle()
-		rectangle.scale()
-		rectangle.position()
-		// rectangle.fillGradient()
 	};
+
+	for (var i = $(".rectangle").length - 1; i >= 0; i--) {
+		rectangle.scale($(".rectangle")[i])
+		rectangle.position($(".rectangle")[i])
+	};
+		// rectangle.fillGradient()
 })

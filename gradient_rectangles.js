@@ -7,15 +7,15 @@ Rectangle.prototype.appendRectangle = function() {
 	$("body").append(div)
 };
 
-Rectangle.prototype.scale = function() {
-	$(".rectangle").css({"height":"400px", "width":"250px"})
+Rectangle.prototype.scale = function(rectangle) {
+	$(rectangle).css({"height":"400px", "width":"250px"})
 };
 
-Rectangle.prototype.position = function() {
+Rectangle.prototype.position = function(rectangle) {
 	var posTop = this.getRandPositionInRange()
 	var posLeft = this.getRandPositionInRange()
 
-	$(".rectangle").css({"top":posTop + "%", "left":posLeft + "%", "transform":"translateX(-" + posTop+"%) translateY(-" + posLeft+"%)"})
+	$(rectangle).css({"top":posTop + "%", "left":posLeft + "%", "transform":"translateX(-" + posTop+"%) translateY(-" + posLeft+"%)"})
 };
 
 Rectangle.prototype.getRandPositionInRange = function() {
