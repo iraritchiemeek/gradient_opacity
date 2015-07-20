@@ -29,7 +29,11 @@ Rectangle.prototype.getBaseColor = function() {
     return "rgb(" + rgb.join(",") + ")";
 };
 
-Rectangle.prototype.color = function(rectangle) {
-	$(rectangle).css({"background":this.getBaseColor()})
+
+Rectangle.prototype.applyGradient = function(rectangle) {
+	var startColor = this.getBaseColor()
+	var endColor = this.getBaseColor()
+
+	$(rectangle).css({"background": "linear-gradient(to bottom left," + startColor + "," + endColor + ")"})
 };
 
