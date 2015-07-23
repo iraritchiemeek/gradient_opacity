@@ -1,3 +1,3 @@
 # gradient_opacity
 
-##https://cdn.rawgit.com/iraritchiemeek/gradient_opacity/master/index.html
+##https://rawgit.com/iraritchiemeek/gradient_opacity/master/index.html
