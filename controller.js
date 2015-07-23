@@ -5,6 +5,7 @@ $(function(){
 
 
 	$("#container").on('click', function(){
+		$("#click").remove()
 		$(".rectangle").remove()
 		for (var i = 0; i < 2; i++) {
 			rectangle.appendRectangle()
