@@ -2,8 +2,6 @@ $(function(){
 	
 	var rectangle = new Rectangle	
 
-
-
 	$("#container").on('click', function(){
 		$("#click").remove()
 		$(".rectangle").remove()
