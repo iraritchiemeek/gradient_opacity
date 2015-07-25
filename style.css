@@ -16,11 +16,17 @@ html, body{
 	background: linear-gradient(to top right, white, #BDBDBD);
   	-webkit-background-clip: text;
   	-webkit-text-fill-color: transparent;
-	font-weight: bold;
 	font-size: 200px;
 	font-family: Arial;
 	top: 50%;
  	left: 50%;
+ 	position: absolute;
+ 	transform: translateX(-50%) translateY(-50%);
+}
+
+.centralLines {
+	background: red;
+	width: 100%;
  	position: absolute;
  	transform: translateX(-50%) translateY(-50%);
 }
