@@ -5,15 +5,15 @@ $(function(){
 	var click_count = 0
 
 	$("#container").on('click', function(){
+
 		click_count += 1
 		var positions = centralOpening.getPositions(click_count)
-		var lines = $(".centralLines")
 
 		$("#click").remove()
 		$(".rectangle").remove()
 
 		centralOpening.appendLines(click_count)
-		centralOpening.positionLines(lines, positions)
+		centralOpening.positionLines(positions)
 		centralOpening.sizeLines()
 
 		for (var i = 0; i < 3; i++) {

@@ -22,14 +22,20 @@ CentralOpening.prototype.sizeLines = function() {
 	$(".centralLines").css({"height":(this.height/10)})
 };
 
-CentralOpening.prototype.positionLines = function(lines, positions) {
-	console.log
+CentralOpening.prototype.positionLines = function(positions) {
+	var lines = []
+
+	// fuck prevobjects ??!!
 
 	if (positions.length == 1) {
 		$(".centralLines").css({"top": positions[0], "left": "50%"})
 	} else {
-		$(".centralLines")[-1].css({"top": positions[0], "left": "50%"})
-		$(".centralLines")[-2].css({"top": positions[1], "left": "50%"})
+		$.each($(".centralLines"), function(index, line){
+			lines.push(line)
+			console.log(lines)
+			$(lines[1]).css({"top": positions[0], "left": "50%"})
+			$(lines[2]).css({"top": positions[1], "left": "50%"})
+		})
 	}
 
 };
