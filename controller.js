@@ -6,7 +6,11 @@ $(function(){
 
 	$("#container").on('click', function(){
 
-		click_count += 1
+		if (click_count < 5) {
+			click_count += 1
+		} else {
+			click_count = 1
+		}
 		var positions = centralOpening.getPositions(click_count)
 
 		$("#click").remove()
