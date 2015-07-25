@@ -24,18 +24,18 @@ CentralOpening.prototype.sizeLines = function() {
 
 CentralOpening.prototype.positionLines = function(positions) {
 	var lines = []
+	$.each($(".centralLines"), function(index, line){
+		lines.push(line)
+	})
 
 	// fuck prevobjects ??!!
 
 	if (positions.length == 1) {
 		$(".centralLines").css({"top": positions[0], "left": "50%"})
 	} else {
-		$.each($(".centralLines"), function(index, line){
-			lines.push(line)
-			console.log(lines)
-			$(lines[1]).css({"top": positions[0], "left": "50%"})
-			$(lines[2]).css({"top": positions[1], "left": "50%"})
-		})
+		console.log(lines)
+		$(lines.pop()).css({"top": positions[0], "left": "50%"})
+		$(lines.pop()).css({"top": positions[1], "left": "50%"})
 	}
 
 };
