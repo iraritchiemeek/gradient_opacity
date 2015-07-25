@@ -24,15 +24,10 @@ Rectangle.prototype.getRandPositionInRange = function() {
 	return Math.floor(Math.random() * (max-min + 1) + min)
 };
 
-Rectangle.prototype.getBaseColor = function() {
-	var rgb = [rgbValue(), rgbValue(), rgbValue()];
-    return "rgb(" + rgb.join(",") + ")";
-};
-
 
 Rectangle.prototype.applyGradient = function(rectangle) {
-	var startColor = this.getBaseColor()
-	var endColor = this.getBaseColor()
+	var startColor = randRGB()
+	var endColor = randRGB()
 
 	$(rectangle).css({"background": "linear-gradient(to bottom left," + startColor + "," + endColor + ")"})
 };

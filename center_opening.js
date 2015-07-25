@@ -49,3 +49,8 @@ CentralOpening.prototype.getPositions = function(click_count) {
 		case 5: return ['10%', '90%']; break;
 	}
 };
+
+CentralOpening.prototype.colorLines = function(click_count) {
+	$(".click" + click_count).css({"background": "linear-gradient(to left," + randRGB() + "," + randRGB() + ")"})
+
+};
