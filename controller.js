@@ -21,7 +21,7 @@ $(function(){
 		centralOpening.sizeLines()
 		centralOpening.colorLines(click_count)
 
-		for (var i = 0; i < 3; i++) {
+		for (var i = 0; i < 2; i++) {
 			rectangle.appendRectangle()
 		};
 
